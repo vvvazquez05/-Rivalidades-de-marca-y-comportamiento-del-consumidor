@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivalidades de marca | Consumer Behavior</title>
+<meta name="description" content="Blog académico sobre rivalidades de marca, elogio a la competencia y comportamiento del consumidor.">
+<style>
+:root{--ink:#172033;--blue:#315f8c;--gold:#c99a4a;--cream:#f7f5ef;--white:#fff;--muted:#687482;--line:#e3e6e8;--shadow:0 18px 50px rgba(23,32,51,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:#26313d;line-height:1.75}a{color:inherit}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1160px;margin:auto;padding:15px 22px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;color:var(--ink)}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.9rem}.navlinks a{text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--blue)}
+.hero{min-height:610px;display:flex;align-items:center;color:white;background:radial-gradient(circle at 80% 20%,rgba(201,154,74,.30),transparent 30%),linear-gradient(135deg,#111a2b,#315f8c);overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-190px;top:-150px}
+.hero-inner{max-width:1160px;width:100%;margin:auto;padding:80px 22px;position:relative;z-index:2}.eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 13px;text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;margin-bottom:24px}
+h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.98;letter-spacing:-4px;max-width:900px;margin:0 0 28px}.hero h1 span{color:#f1cf8b}.hero p{max-width:760px;font-size:1.2rem;color:rgba(255,255,255,.84);margin-bottom:34px}.btn{display:inline-block;background:white;color:var(--ink);padding:12px 21px;border-radius:999px;text-decoration:none;font-weight:800}
+main{max-width:1060px;margin:auto;padding:80px 22px}section{margin-bottom:92px;scroll-margin-top:90px}.intro{background:white;margin-top:-42px;position:relative;z-index:4;padding:38px;border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line)}.label{font-size:.76rem;text-transform:uppercase;letter-spacing:1.7px;font-weight:900;color:var(--gold);margin-bottom:10px}
+h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;letter-spacing:-1.5px;color:var(--ink);margin:0 0 22px}h3{color:var(--ink);margin:0 0 10px}p{margin:0 0 18px}.lead{font-size:1.18rem;color:#4c5865}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 10px 30px rgba(0,0,0,.05)}.card.dark{border-top:5px solid var(--ink)}.card.gold{border-top:5px solid var(--gold)}.tag{display:inline-block;background:#edf4f8;color:var(--blue);font-size:.72rem;text-transform:uppercase;font-weight:900;padding:5px 10px;border-radius:999px;margin-bottom:16px}
+.card ul{padding-left:20px}.card li{margin:8px 0}.case{background:#eaf1f5;padding:35px;border-radius:20px;margin-top:25px}.quote{margin:38px 0;padding:36px 40px;border-radius:20px;background:var(--ink);color:white}.quote p{font-size:1.42rem;line-height:1.45;margin:0;max-width:800px}
+table{width:100%;border-collapse:collapse;background:white;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);margin-top:28px}th{background:var(--ink);color:white;text-align:left;padding:16px}td{padding:16px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border:0}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:32px}.step{background:white;border:1px solid var(--line);border-radius:16px;padding:20px 12px;text-align:center;font-weight:800;position:relative;box-shadow:0 8px 24px rgba(0,0,0,.04)}.step small{display:block;color:var(--gold);margin-bottom:6px}.step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:50%;color:var(--gold);font-size:20px}
+.risks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}.risk{background:white;border:1px solid var(--line);border-radius:18px;padding:25px}.num{font-weight:900;color:var(--gold);font-size:.8rem}
+.conclusion{background:linear-gradient(135deg,#111a2b,#315f8c);color:white;border-radius:22px;padding:48px;box-shadow:var(--shadow)}.conclusion h2{color:white}.conclusion p{color:rgba(255,255,255,.85)}.final{color:#f1cf8b!important;font-size:1.35rem;font-weight:800;margin-top:25px}
+.refs{background:white;border:1px solid var(--line);border-radius:20px;padding:35px}.ref{padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:.93rem}.ref:last-child{border:0}
+footer{background:#101722;color:rgba(255,255,255,.65);text-align:center;padding:32px 20px;font-size:.88rem}footer strong{color:white}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.navlinks{display:none}.hero{min-height:560px}.grid,.risks{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.step:not(:last-child):after{content:"↓";right:auto;top:auto;bottom:-22px;left:50%;transform:translateX(-50%)}.intro,.case,.conclusion,.refs{padding:28px}main{padding-top:60px}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><div class="logo">Consumer<span>Behavior</span></div><ul class="navlinks"><li><a href="#rivalidad">Rivalidad</a></li><li><a href="#elogio">Elogio</a></li><li><a href="#thin">Thin Slicing</a></li><li><a href="#riesgos">Riesgos</a></li><li><a href="#conclusion">Conclusión</a></li></ul></div></nav>
+
+<header class="hero">
+<div class="hero-inner">
+<span class="eyebrow">Consumer Behavior • Brand Strategy</span>
+<h1>Rivalidades de marca: <span>¿competir o reconocer?</span></h1>
+<p>Cómo las rivalidades entre marcas, el elogio a la competencia y los juicios rápidos del consumidor pueden transformar el posicionamiento, el engagement y la intención de compra.</p>
+<a class="btn" href="#rivalidad">Explorar el análisis ↓</a>
+</div>
+</header>
+
+<main>
+<section class="intro reveal">
+<div class="label">Introducción</div>
+<p class="lead">En el marketing, las marcas compiten constantemente por la atención, preferencia y lealtad de los consumidores. Una de las estrategias más conocidas consiste en comparar directamente una marca con su rival. Sin embargo, existe una alternativa aparentemente contradictoria: <strong>elogiar a la competencia.</strong></p>
+<p>Aunque reconocer las fortalezas de un competidor puede parecer una desventaja, esta acción puede generar percepciones positivas sobre la propia marca. La razón está relacionada con la manera en que los consumidores interpretan señales de calidez, competencia, confianza y autenticidad.</p>
+</section>
+
+<section id="rivalidad" class="reveal">
+<div class="label">01 / La rivalidad tradicional</div>
+<h2>Cuando competir significa decir: “Nosotros contra ellos.”</h2>
+<p class="lead">Las estrategias tradicionales de rivalidad buscan diferenciar una marca mediante comparaciones directas con sus competidores.</p>
+<div class="grid">
+<article class="card dark"><span class="tag">Estrategia tradicional</span><h3>Rivalidad directa</h3><p>La marca destaca sus ventajas mientras presenta al competidor como una alternativa menos atractiva.</p><ul><li>Genera atención rápidamente.</li><li>Facilita la comparación.</li><li>Fortalece una identidad diferenciada.</li><li>Puede aumentar la identificación del consumidor.</li><li>Puede generar una percepción negativa si el ataque es excesivo.</li></ul></article>
+<article class="card gold"><span class="tag">Estrategia alternativa</span><h3>Elogiar al competidor</h3><p>La marca reconoce una fortaleza del rival y posteriormente explica aquello que la hace diferente.</p><ul><li>Puede comunicar seguridad.</li><li>Puede aumentar la percepción de honestidad.</li><li>Puede transmitir respeto.</li><li>Puede fortalecer la percepción de calidez.</li><li>Puede aumentar la confianza.</li></ul></article>
+</div>
+<div class="case"><strong>CASO CLÁSICO · APPLE “GET A MAC”</strong><p style="margin-top:10px">La campaña <strong>Get a Mac</strong> convirtió la rivalidad Mac vs. PC en una narrativa sencilla y memorable. La comparación directa permitió a Apple comunicar diferencias de posicionamiento utilizando al competidor como referencia.</p></div>
+</section>
+
+<section id="elogio" class="reveal">
+<div class="label">02 / El poder del elogio</div>
+<h2>¿Por qué reconocer al rival puede beneficiar a la propia marca?</h2>
+<p class="lead">El consumidor no evalúa únicamente el producto. También interpreta las intenciones y personalidad que la marca comunica.</p>
+<div class="quote"><p>Una marca que puede reconocer que su competidor hace algo bien puede parecer más segura de sus propias capacidades.</p></div>
+<p>La percepción de marca suele organizarse alrededor de dos dimensiones importantes: <strong>calidez</strong> y <strong>competencia</strong>.</p>
+<table><thead><tr><th>Dimensión</th><th>¿Qué comunica?</th><th>Posible respuesta del consumidor</th></tr></thead><tbody>
+<tr><td><strong>Calidez</strong></td><td>Buenas intenciones, respeto y consideración.</td><td>“Esta marca parece auténtica y confiable.”</td></tr>
+<tr><td><strong>Competencia</strong></td><td>Capacidad para cumplir las promesas realizadas.</td><td>“Esta marca sabe lo que está haciendo.”</td></tr>
+<tr><td><strong>Calidez + competencia</strong></td><td>Una marca capaz y al mismo tiempo considerada.</td><td>Mayor confianza y una actitud más favorable.</td></tr>
+</tbody></table>
+</section>
+
+<section id="thin" class="reveal">
+<div class="label">03 / Psicología del consumidor</div>
+<h2>Thin slicing: pequeños detalles, grandes impresiones</h2>
+<p class="lead">Los consumidores no siempre necesitan analizar toda la información disponible para formar una impresión inicial sobre una marca.</p>
+<p>El concepto de <strong>thin slicing</strong> ayuda a explicar cómo las personas pueden utilizar pequeñas cantidades de información observable para realizar juicios rápidos.</p>
+<div class="grid">
+<div class="card"><span class="tag">Señal</span><h3>“Reconocemos su fortaleza.”</h3><p>El consumidor puede interpretar esta acción como una señal de seguridad y honestidad.</p></div>
+<div class="card"><span class="tag">Interpretación</span><h3>“No necesitan atacar.”</h3><p>La marca puede parecer más segura de su propia propuesta de valor y generar una impresión favorable.</p></div>
+</div>
+<div class="flow">
+<div class="step"><small>01</small>Elogio</div><div class="step"><small>02</small>Calidez</div><div class="step"><small>03</small>Confianza</div><div class="step"><small>04</small>Engagement</div><div class="step"><small>05</small>Intención de compra</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="label">04 / Engagement y lealtad</div>
+<h2>La competencia también puede convertirse en conexión</h2>
+<p>Cuando una marca demuestra respeto por sus competidores, el consumidor puede interpretar este comportamiento como una señal de autenticidad y seguridad. Las personas no solamente compran productos: también desarrollan relaciones psicológicas con las marcas.</p>
+<p>Una marca extremadamente competente puede tener excelentes productos, pero si parece arrogante o agresiva, algunos consumidores pueden desarrollar una relación menos favorable.</p>
+<p>Por el contrario, una marca que combina <strong>competencia y calidez</strong> puede crear una percepción más equilibrada: es capaz de cumplir sus promesas y, al mismo tiempo, parece tener buenas intenciones.</p>
+</section>
+
+<section id="riesgos" class="reveal">
+<div class="label">05 / El otro lado de la estrategia</div>
+<h2>¿Cuándo podría no funcionar elogiar a la competencia?</h2>
+<p class="lead">El elogio no es una fórmula universal. Su efectividad depende del contexto, la credibilidad de la marca y la manera en que el mensaje es interpretado.</p>
+<div class="risks">
+<div class="risk"><div class="num">01</div><h3>El elogio parece falso</h3><p>Si el consumidor percibe una táctica publicitaria poco auténtica, puede disminuir la credibilidad.</p></div>
+<div class="risk"><div class="num">02</div><h3>Se da demasiada visibilidad al rival</h3><p>La marca podría terminar ayudando al consumidor a recordar más al competidor que a ella misma.</p></div>
+<div class="risk"><div class="num">03</div><h3>La diferenciación no es clara</h3><p>Reconocer una fortaleza ajena funciona mejor cuando la marca también comunica qué la hace diferente.</p></div>
+<div class="risk"><div class="num">04</div><h3>El consumidor necesita datos</h3><p>En tecnología, automóviles o servicios financieros, la calidez no reemplaza información objetiva sobre precio, calidad o rendimiento.</p></div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="label">06 / Una estrategia equilibrada</div>
+<h2>Reconocer. Respetar. Diferenciar. Conectar.</h2>
+<p class="lead">La rivalidad y el elogio no necesariamente tienen que ser estrategias opuestas.</p>
+<div class="flow">
+<div class="step"><small>01</small>Reconocer</div><div class="step"><small>02</small>Respetar</div><div class="step"><small>03</small>Diferenciar</div><div class="step"><small>04</small>Conectar</div><div class="step"><small>05</small>Generar confianza</div>
+</div>
+<div class="quote"><p>La meta no es demostrar que la competencia es mala. La meta es demostrar que la propia marca conoce exactamente qué valor puede ofrecer.</p></div>
+</section>
+
+<section id="conclusion" class="reveal">
+<div class="conclusion">
+<div class="label">Conclusión</div>
+<h2>Competir no siempre significa atacar.</h2>
+<p>Las rivalidades de marca han sido una herramienta importante para construir posicionamiento y captar la atención del consumidor. Campañas como Mac vs. PC demostraron que las comparaciones directas pueden convertir una competencia de productos en una historia fácil de recordar.</p>
+<p>Sin embargo, elogiar al competidor presenta una alternativa interesante. Cuando el reconocimiento es genuino, puede comunicar seguridad, honestidad y respeto. Estas señales pueden contribuir a percepciones de calidez y competencia, fortaleciendo la confianza y potencialmente la intención de compra.</p>
+<p>El concepto de <em>thin slicing</em> ayuda a comprender por qué una pequeña acción puede generar una impresión mucho más amplia. Los consumidores utilizan señales observables para construir rápidamente percepciones sobre las marcas.</p>
+<p>Por supuesto, elogiar a la competencia requiere equilibrio. Si el mensaje parece falso, si proporciona demasiada visibilidad al rival o si no comunica una propuesta de valor diferenciada, la estrategia puede perder efectividad.</p>
+<p class="final">Las marcas no solamente compiten por ventas; compiten por las percepciones, emociones y relaciones que construyen en la mente del consumidor.</p>
+</div>
+</section>
+
+<section class="reveal">
+<div class="refs">
+<div class="label">Referencias</div><h2>Fuentes consultadas</h2>
+<div class="ref">Cutright, K. M., Du, K. M., & Zhou, L. (2022). Research: When praising the competition benefits your brand. <em>Harvard Business Review.</em></div>
+<div class="ref">Kervyn, N., Fiske, S. T., & Malone, C. (2022). Social perception of brands: Warmth and competence define images of both brands and social groups. <em>Consumer Psychology Review, 5</em>(1), 51–68.</div>
+<div class="ref">Kolbl, Ž., Diamantopoulos, A., Arslanagic-Kalajdzic, M., & Zabkar, V. (2020). Do brand warmth and brand competence add value to consumers? A stereotyping perspective. <em>Journal of Business Research, 118</em>, 346–362.</div>
+<div class="ref">Xue, J., Zhou, Z., Zhang, L., & Majeed, S. (2020). Do brand competence and warmth always influence purchase intention? The moderating role of gender. <em>Frontiers in Psychology, 11</em>, 248.</div>
+<div class="ref">Apple. (2006). <em>Get a Mac campaign.</em> Apple.</div>
+</div>
+</section>
+</main>
+
+<footer><strong>Consumer Behavior Blog</strong> · Brand Rivalry & Consumer Psychology<br>Academic blog presentation</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
